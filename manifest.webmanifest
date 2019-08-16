@@ -1,0 +1,15 @@
+{
+"background_color":"white",
+"description":"pwa for bfmem.net",
+"display":"fullscreen",
+"icons":[
+	{
+		"src":"bfmem.png",
+		"sizes":"192x192",
+		"type":"image/png"
+	}
+	],
+"name":"bfmem.net",
+"short_name":"bfmem",
+"start_url":"www.bfmem.net"
+}
