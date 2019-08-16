@@ -3,9 +3,8 @@ function installcb(e){
 	e.waitUntil(caches.open(cname).then(function(cache){
 		console.log('open ... and add assets')
 		return cache.add('index.html')
-	}).catch(err){
-		console.log('open err : '+err)
 	})
+	)
 }
 self.addEventListener('install',installcb)
 
