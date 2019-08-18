@@ -2,7 +2,7 @@ var cname = 'bfmem.net.0.1'
 function installcb(e){
 	e.waitUntil(caches.open(cname).then(function(cache){
 		console.log('open ... and add assets')
-		return cache.add('index.html')
+		return cache.add('jump.html')
 	})
 	)
 }
