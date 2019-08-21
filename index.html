@@ -22,6 +22,10 @@
 			top:1px;
 		}
 		</style>
+	</head>
+	<body>
+		<button class='pwabtn'>add to home screen</button>
+		Welcome to the test of pwa for bfmem.net<br>
 		<script>
 			if('serviceWorker' in navigator){
 				navigator.serviceWorker.register('sw.js').then(
@@ -58,9 +62,5 @@
 			}
 			window.addEventListener('beforeinstallprompt' , bicb);
 		</script>
-	</head>
-	<body>
-		<button class='pwabtn'>add to home screen</button>
-		Welcome to the test of pwa for bfmem.net<br>
 	</body>
 </html>
