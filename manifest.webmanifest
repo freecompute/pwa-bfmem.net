@@ -1,7 +1,7 @@
 {
 "background_color":"white",
 "description":"pwa for bfmem.net",
-"display":"fullscreen",
+"display":"standalone",
 "icons":[
 	{
 		"src":"bfmem-152.png",
