@@ -15,6 +15,13 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="bfmem-180.png">
 		<!-- link rel="apple-touch-startup-image" href="/launch.png"> -->
 
+		<style type="txt/css">
+		.pwabtn{
+			position:absolute;
+			left:1px;
+			top:1px;
+		}
+		</style>
 		<script>
 			if('serviceWorker' in navigator){
 				navigator.serviceWorker.register('sw.js').then(
@@ -30,7 +37,26 @@
 				).catch(function(err){
 					console.log('register err : ' + err)
 				})
+			}else{alert("browser don't support the pwa")}
+			var installbtn = document.querySelector('.pwabtn');
+			installbtn.style.display= 'none';
+			function bicb(evt){
+				evt.preventDefault();
+				let defer = evt;
+				installbtn.style.display='block';
+				installbtn.addEventListener('click' , (ce)=>{
+					installbtn.style.display='none';
+					defer.prompt();
+					defer.userChoice.then((choice)=>{
+						if(choice.outcome === 'accepted'){
+						alert('add to desktop');}else{
+							alert('exit');
+						}
+						defer = null;
+					})
+				})
 			}
+			window.addEventListener('beforeinstallprompt' , bicb);
 		</script>
 	</head>
 	<body>
