@@ -5,6 +5,16 @@
 		<link rel="manifest" href="manifest.webmanifest">
 		<link rel="icon" type="image/png" href="bfmem-16.png" sizes="16x16">
 		<link rel="icon" type="image/png" href="bfmem-32.png">
+		<!-- add apple webapplication meta tags and icons -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="bfmem.net">
+		<link rel="apple-touch-icon" href="bfmem-180.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="bfmem-152.png">
+		<link rel="apple-touch-icon" sizes="167x167" href="bfmem-167.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="bfmem-180.png">
+		<!-- link rel="apple-touch-startup-image" href="/launch.png"> -->
+		
 		<script>
 			if('serviceWorker' in navigator){
 				navigator.serviceWorker.register('sw.js').then(
